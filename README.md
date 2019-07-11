@@ -1,6 +1,6 @@
-# skeleton-packer 💀📦 #
+# freeipa-client-packer 💀📦 #
 
-[![Build Status](https://travis-ci.com/cisagov/skeleton-packer.svg?branch=develop)](https://travis-ci.com/cisagov/skeleton-packer)
+[![Build Status](https://travis-ci.com/cisagov/freeipa-client-packer.svg?branch=develop)](https://travis-ci.com/cisagov/freeipa-client-packer)
 
 This is a generic skeleton project that can be used to quickly get a
 new [cisagov](https://github.com/cisagov) GitHub
