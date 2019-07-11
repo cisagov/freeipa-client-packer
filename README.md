@@ -2,13 +2,19 @@
 
 [![Build Status](https://travis-ci.com/cisagov/freeipa-client-packer.svg?branch=develop)](https://travis-ci.com/cisagov/freeipa-client-packer)
 
-This is a generic skeleton project that can be used to quickly get a
-new [cisagov](https://github.com/cisagov) GitHub
-[packer](https://packer.io) project started.  This skeleton project
-contains [licensing information](LICENSE), as well as [pre-commit
-hooks](https://pre-commit.com) and a [Travis
-CI](https://travis-ci.com) configuration appropriate for the major
-languages that we use.
+This is a project for building a [FreeIPA](https://www.freeipa.org)
+image based on a generic [Debian](https://www.debian.org/) base image.
+
+Note that this AMI is a little different from others in that it
+requires the
+[`freeipa-client-install`](https://linux.die.net/man/1/ipa-client-install)
+command (with appropriate arguments) to be run on first boot.  That
+command cannot be run at AMI build time because it fails if certain
+runtime checks fail; for instance, the hostname and IP of the machine
+where the command is being run must agree with what is in DNS.  The
+best way to make `freeipa-cliuent-install` run at first boot is to use
+[Terraform](https://www.terraform.io/) to configure
+[cloud-init](https://cloud-init.io/).
 
 ## Pre-requisites ##
 
