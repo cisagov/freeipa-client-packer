@@ -28,18 +28,18 @@
       },
       "source_ami_filter": {
         "filters": {
-          "name": "debian-buster-hvm-x86_64-gp2-*",
+          "name": "Fedora-Cloud-Base-29-*x86_64-hvm-*-gp2-*",
           "root-device-type": "ebs",
           "virtualization-type": "hvm"
         },
         "most_recent": true,
         "owners": [
-          "379101102735"
+          "125523088429"
         ]
       },
-      "ssh_username": "admin",
+      "ssh_username": "fedora",
       "tags": {
-        "Application": "Example",
+        "Application": "FreeIPA client",
         "Base_AMI_Name": "{{ .SourceAMIName }}",
         "OS_Version": "Fedora 29",
         "Pre_Release": "from-patcher-script",
